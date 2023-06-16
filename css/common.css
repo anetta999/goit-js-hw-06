@@ -39,3 +39,8 @@ button {
   display: block;
   height: auto;
 }
+
+.box {
+  width: 30px;
+  height: 30px;
+}
