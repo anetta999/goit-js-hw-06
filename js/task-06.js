@@ -10,24 +10,16 @@ const input = document.querySelector("#validation-input");
 
 input.addEventListener("blur", handlerInputBlur);
 
-function handlerInputBlur(event) {
-  const dataLength = event.currentTarget.getAttribute("data-length");
+function handlerInputBlur() {
+  const dataLength = input.getAttribute("data-length");
   console.log(dataLength);
 
-  const currentLength = event.currentTarget.value.length;
+  const currentLength = input.value.length;
   console.log(currentLength);
 
-  if (
-    Number(dataLength) === Number(currentLength) &&
-    !event.currentTarget.classList.contains("invalid")
-  ) {
-    event.currentTarget.classList.add("valid");
-  } else if (
-    Number(dataLength) === Number(currentLength) &&
-    event.currentTarget.classList.contains("invalid")
-  ) {
-    event.currentTarget.classList.replace("invalid", "valid");
-  } else {
-    event.currentTarget.classList.add("invalid");
+  input.classList.add("invalid");
+
+  if (Number(dataLength) === Number(currentLength)) {
+    input.classList.replace("invalid", "valid");
   }
 }

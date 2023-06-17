@@ -17,10 +17,10 @@ let counterValue = 0;
 
 function handlerdecrementBtnClick() {
   counterValue -= 1;
-  selectors.counter.textContent = `${counterValue}`;
+  selectors.counter.textContent = counterValue;
 }
 
 function handlerincrementBtnClick() {
   counterValue += 1;
-  selectors.counter.textContent = `${counterValue}`;
+  selectors.counter.textContent = counterValue;
 }

@@ -11,9 +11,9 @@ const selectors = {
 selectors.input.addEventListener("input", handlerInput);
 
 function handlerInput(event) {
-  selectors.output.textContent = event.currentTarget.value;
+  selectors.output.textContent = event.target.value.trim();
 
-  if (!event.currentTarget.value) {
+  if (!event.target.value.trim()) {
     selectors.output.textContent = "Anonymous";
   }
 }

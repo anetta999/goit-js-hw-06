@@ -29,15 +29,21 @@ function handlerFormSubmit(event) {
   // formData.forEach((value, key) => (data[key] = value));
   // console.log(data);
 
-  const keys = Object.keys(event.currentTarget.elements);
-  console.log(keys);
+  // const keys = Object.keys(event.currentTarget.elements);
+  // console.log(keys);
 
-  const data = keys.reduce((acc, item) => {
-    if (isNaN(item)) {
-      acc[item] = event.currentTarget.elements[item].value;
-    }
-    return acc;
-  }, {});
+  // const data = keys.reduce((acc, item) => {
+  //   if (isNaN(item)) {
+  //     acc[item] = event.currentTarget.elements[item].value;
+  //   }
+  //   return acc;
+  // }, {});
+  // console.log(data);
+
+  const data = {
+    email: email.value,
+    password: password.value,
+  };
   console.log(data);
 
   event.currentTarget.reset();

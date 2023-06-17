@@ -7,11 +7,8 @@ const span = document.querySelector("#text");
 
 input.addEventListener("input", handlerInputRange);
 
-const value = input.value;
+function handlerInputRange(event) {
+  span.style.fontSize = `${event.target.value}px`;
 
-function handlerInputRange() {
-  span.style.fontSize = `${value}px`;
-
-  console.log(value);
   console.log(span.style.fontSize);
 }

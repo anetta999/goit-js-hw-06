@@ -8,12 +8,13 @@
 // Для виконання цього завдання потрібно використати метод forEach()
 // і властивості навігації по DOM.
 
-const list = document.querySelector("#categories"); // повертає перший елемент документа, який відповідає вказаному селектору
+const list = document.querySelectorAll(".item"); // повертає перший елемент документа, який відповідає вказаному селектору
 console.log(list);
 
-console.log(`Number of categories: ${list.children.length}`); // властивість, яка повертає HTML-колекцію(псевдомасив) усіх дітей елемента(включає тільки вузли-елементи, тобто теги), на якому була викликана
+console.log(`Number of categories: ${list.length}`); // властивість, яка повертає HTML-колекцію(псевдомасив) усіх дітей елемента(включає тільки вузли-елементи, тобто теги), на якому була викликана
 
-[...list.children].forEach((li) => {
+list.forEach((li) => {
   console.log(`Category: ${li.firstElementChild.textContent}`);
   console.log(`Elements: ${li.lastElementChild.children.length}`);
 });
+console.log(list.children);
